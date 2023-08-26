@@ -33,12 +33,23 @@ class Servicos extends StatelessWidget {
             begin: Alignment.bottomLeft,
             end: Alignment.topRight,
           )),
-      child: Text(
-        nome,
-        style: const TextStyle(
-          fontSize: 19,
-          color: Colors.white,
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            iconOfService,
+            size: 70,
+            color: Colors.white,
+          ),
+          const Spacer(),
+          Text(
+            nome,
+            style: const TextStyle(
+              fontSize: 19,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
     );
   }

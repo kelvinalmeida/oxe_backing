@@ -26,32 +26,85 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const Saldo(),
-          SizedBox(
-            height: screenHeight / 35,
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Servicos(
-                nome: 'Transferências',
-                color1: Color.fromARGB(255, 156, 93, 20),
-                color2: Color.fromARGB(255, 236, 169, 92),
-              ),
-              SizedBox(
-                width: screenHeight / 35,
-              ),
-              const Servicos(
-                nome: 'Empréstimos',
-                color1: Color.fromARGB(255, 47, 156, 51),
-                color2: Color.fromARGB(255, 89, 241, 94),
-              ),
-            ],
-          )
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Saldo(),
+            SizedBox(
+              height: screenHeight / 35,
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Servicos(
+                  nome: 'Transferências',
+                  color1: Color.fromARGB(255, 90, 20, 156),
+                  color2: Color.fromARGB(255, 236, 169, 92),
+                  iconOfService: Icons.transform_rounded,
+                ),
+                SizedBox(
+                  width: screenHeight / 35,
+                ),
+                const Servicos(
+                  nome: 'Empréstimos',
+                  color1: Color.fromARGB(255, 7, 126, 11),
+                  color2: Color.fromARGB(255, 239, 243, 15),
+                  iconOfService: Icons.monetization_on_rounded,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: screenHeight / 35,
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Servicos(
+                  nome: 'Pagamentos',
+                  color1: Color.fromARGB(255, 20, 156, 43),
+                  color2: Color.fromARGB(255, 236, 169, 92),
+                  iconOfService: Icons.monetization_on_outlined,
+                ),
+                SizedBox(
+                  width: screenHeight / 35,
+                ),
+                const Servicos(
+                  nome: 'Poupança',
+                  color1: Color.fromARGB(255, 47, 156, 51),
+                  color2: Color.fromARGB(255, 89, 241, 94),
+                  iconOfService: Icons.safety_check,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: screenHeight / 35,
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Servicos(
+                  nome: 'Pagamentos',
+                  color1: Color.fromARGB(255, 20, 156, 43),
+                  color2: Color.fromARGB(255, 236, 169, 92),
+                  iconOfService: Icons.monetization_on_outlined,
+                ),
+                SizedBox(
+                  width: screenHeight / 35,
+                ),
+                const Servicos(
+                  nome: 'Poupança',
+                  color1: Color.fromARGB(255, 47, 156, 51),
+                  color2: Color.fromARGB(255, 89, 241, 94),
+                  iconOfService: Icons.safety_check,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: screenHeight / 35,
+            ),
+          ],
+        ),
       ),
     );
   }
