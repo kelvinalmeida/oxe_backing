@@ -6,11 +6,13 @@ class Servicos extends StatelessWidget {
     required this.nome,
     required this.color1,
     required this.color2,
+    required this.iconOfService,
   });
 
   final String nome;
   final Color color1;
   final Color color2;
+  final IconData iconOfService;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class Servicos extends StatelessWidget {
 
     return Container(
       height: screeHeight / 5,
-      width: screeHeight / 3.8,
+      width: screeHeight / 4.4,
       alignment: Alignment.bottomLeft,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -34,7 +36,7 @@ class Servicos extends StatelessWidget {
       child: Text(
         nome,
         style: const TextStyle(
-          fontSize: 22,
+          fontSize: 19,
           color: Colors.white,
         ),
       ),

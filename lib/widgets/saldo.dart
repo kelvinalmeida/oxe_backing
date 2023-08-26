@@ -8,7 +8,7 @@ class Saldo extends StatelessWidget {
     var screenHeight = MediaQuery.of(context).size.height;
     // var screenWidget = MediaQuery.of(context).size.width;
     return Container(
-      height: screenHeight / 4.3,
+      height: screenHeight / 4.7,
       width: double.infinity,
       margin: const EdgeInsets.symmetric(horizontal: 10),
       alignment: Alignment.centerLeft,

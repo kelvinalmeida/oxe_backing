@@ -31,21 +31,21 @@ class HomeScreen extends StatelessWidget {
         children: [
           const Saldo(),
           SizedBox(
-            height: screenHeight / 30,
+            height: screenHeight / 35,
           ),
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               const Servicos(
-                nome: 'Pagamento',
-                color1: Color.fromARGB(255, 47, 156, 51),
-                color2: Color.fromARGB(255, 89, 241, 94),
+                nome: 'Transferências',
+                color1: Color.fromARGB(255, 156, 93, 20),
+                color2: Color.fromARGB(255, 236, 169, 92),
               ),
               SizedBox(
-                width: screenHeight / 30,
+                width: screenHeight / 35,
               ),
               const Servicos(
-                nome: 'Pagamento',
+                nome: 'Empréstimos',
                 color1: Color.fromARGB(255, 47, 156, 51),
                 color2: Color.fromARGB(255, 89, 241, 94),
               ),
