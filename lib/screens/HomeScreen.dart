@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:oxe_backing/widgets/appBarPhoto.dart';
-import 'package:oxe_backing/widgets/fotoPerfilNome.dart';
 import 'package:oxe_backing/widgets/saldo.dart';
 import 'package:oxe_backing/widgets/servicos.dart';
 
@@ -10,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
+    var spacoEntreServicos = screenHeight / 35;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -17,10 +17,12 @@ class HomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 50),
             const AppBarPhoto(),
-            SizedBox(height: screenHeight / 35),
+            SizedBox(
+              height: spacoEntreServicos,
+            ),
             const Saldo(),
             SizedBox(
-              height: screenHeight / 35,
+              height: spacoEntreServicos,
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
@@ -32,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                   iconOfService: Icons.transform_rounded,
                 ),
                 SizedBox(
-                  width: screenHeight / 35,
+                  width: spacoEntreServicos,
                 ),
                 const Servicos(
                   nome: 'Empréstimos',
@@ -43,7 +45,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: screenHeight / 35,
+              height: spacoEntreServicos,
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
@@ -55,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                   iconOfService: Icons.monetization_on_outlined,
                 ),
                 SizedBox(
-                  width: screenHeight / 35,
+                  width: spacoEntreServicos,
                 ),
                 const Servicos(
                   nome: 'Poupança',
@@ -66,7 +68,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: screenHeight / 35,
+              height: spacoEntreServicos,
             ),
             Row(
               mainAxisSize: MainAxisSize.min,
@@ -78,7 +80,7 @@ class HomeScreen extends StatelessWidget {
                   iconOfService: Icons.monetization_on_outlined,
                 ),
                 SizedBox(
-                  width: screenHeight / 35,
+                  width: spacoEntreServicos,
                 ),
                 const Servicos(
                   nome: 'Poupança',

@@ -72,6 +72,10 @@ class Saldo extends StatelessWidget {
                   onPressed: () {},
                   child: const Text(
                     'Extrato',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               )
