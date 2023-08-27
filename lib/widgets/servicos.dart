@@ -18,38 +18,43 @@ class Servicos extends StatelessWidget {
   Widget build(BuildContext context) {
     var screeHeight = MediaQuery.of(context).size.height;
 
-    return Container(
-      height: screeHeight / 5,
-      width: screeHeight / 4.4,
-      alignment: Alignment.bottomLeft,
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(Radius.circular(20)),
-          gradient: LinearGradient(
-            colors: [
-              color1,
-              color2,
-            ],
-            begin: Alignment.bottomLeft,
-            end: Alignment.topRight,
-          )),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(
-            iconOfService,
-            size: 70,
-            color: Colors.white,
-          ),
-          const Spacer(),
-          Text(
-            nome,
-            style: const TextStyle(
-              fontSize: 19,
+    return InkWell(
+      onTap: () {
+        print('hello');
+      },
+      child: Container(
+        height: screeHeight / 5,
+        width: screeHeight / 4.4,
+        alignment: Alignment.bottomLeft,
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(Radius.circular(20)),
+            gradient: LinearGradient(
+              colors: [
+                color1,
+                color2,
+              ],
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+            )),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(
+              iconOfService,
+              size: 70,
               color: Colors.white,
             ),
-          ),
-        ],
+            const Spacer(),
+            Text(
+              nome,
+              style: TextStyle(
+                fontSize: screeHeight / 40,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

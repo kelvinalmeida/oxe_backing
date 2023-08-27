@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oxe_backing/widgets/appBarPhoto.dart';
 import 'package:oxe_backing/widgets/fotoPerfilNome.dart';
 import 'package:oxe_backing/widgets/saldo.dart';
 import 'package:oxe_backing/widgets/servicos.dart';
@@ -10,26 +11,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        toolbarHeight: 100,
-        shadowColor: null,
-        elevation: 0,
-        title: const FotoPerfilNome(),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.settings,
-              color: Color.fromARGB(255, 69, 110, 254),
-            ),
-          ),
-        ],
-      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const SizedBox(height: 50),
+            const AppBarPhoto(),
+            SizedBox(height: screenHeight / 35),
             const Saldo(),
             SizedBox(
               height: screenHeight / 35,
@@ -71,8 +59,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const Servicos(
                   nome: 'Poupança',
-                  color1: Color.fromARGB(255, 47, 156, 51),
-                  color2: Color.fromARGB(255, 89, 241, 94),
+                  color1: Color.fromARGB(255, 228, 172, 53),
+                  color2: Color.fromARGB(255, 81, 108, 129),
                   iconOfService: Icons.safety_check,
                 ),
               ],
