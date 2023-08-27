@@ -32,6 +32,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 90, 20, 156),
                   color2: Color.fromARGB(255, 236, 169, 92),
                   iconOfService: Icons.transform_rounded,
+                  screenTarget: Saldo(),
                 ),
                 SizedBox(
                   width: spacoEntreServicos,
@@ -41,6 +42,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 7, 126, 11),
                   color2: Color.fromARGB(255, 239, 243, 15),
                   iconOfService: Icons.monetization_on_rounded,
+                  screenTarget: Saldo(),
                 ),
               ],
             ),
@@ -55,6 +57,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 20, 156, 43),
                   color2: Color.fromARGB(255, 236, 169, 92),
                   iconOfService: Icons.monetization_on_outlined,
+                  screenTarget: Saldo(),
                 ),
                 SizedBox(
                   width: spacoEntreServicos,
@@ -64,6 +67,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 228, 172, 53),
                   color2: Color.fromARGB(255, 81, 108, 129),
                   iconOfService: Icons.safety_check,
+                  screenTarget: Saldo(),
                 ),
               ],
             ),
@@ -78,6 +82,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 20, 156, 43),
                   color2: Color.fromARGB(255, 236, 169, 92),
                   iconOfService: Icons.monetization_on_outlined,
+                  screenTarget: Saldo(),
                 ),
                 SizedBox(
                   width: spacoEntreServicos,
@@ -87,6 +92,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 47, 156, 51),
                   color2: Color.fromARGB(255, 89, 241, 94),
                   iconOfService: Icons.safety_check,
+                  screenTarget: Saldo(),
                 ),
               ],
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oxe_backing/screens/HomeScreen.dart';
+import 'package:oxe_backing/screens/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         // colorScheme: ColorScheme.light();
       ),
-      home: HomeScreen(),
+      home: const Login(),
     );
   }
 }

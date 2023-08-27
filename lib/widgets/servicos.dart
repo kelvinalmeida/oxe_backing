@@ -7,12 +7,22 @@ class Servicos extends StatelessWidget {
     required this.color1,
     required this.color2,
     required this.iconOfService,
+    required this.screenTarget,
   });
 
   final String nome;
   final Color color1;
   final Color color2;
   final IconData iconOfService;
+  final Widget screenTarget;
+
+  void goToScreen(Widget screen, BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => screen,
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +30,7 @@ class Servicos extends StatelessWidget {
 
     return InkWell(
       onTap: () {
-        print('hello');
+        goToScreen(screenTarget, context);
       },
       child: Container(
         height: screeHeight / 5,
