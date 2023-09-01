@@ -1,8 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:oxe_backing/screens/extrato.dart';
 
 class Saldo extends StatelessWidget {
   const Saldo({super.key});
+
+  void showModalExtrato(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => const Extrato(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +77,9 @@ class Saldo extends StatelessWidget {
                     backgroundColor:
                         MaterialStatePropertyAll(Colors.transparent),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalExtrato(context);
+                  },
                   child: const Text(
                     'Extrato',
                     style: TextStyle(
