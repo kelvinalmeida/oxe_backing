@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oxe_backing/screens/transferencia.dart';
 import 'package:oxe_backing/widgets/appBarPhoto.dart';
 import 'package:oxe_backing/widgets/saldo.dart';
 import 'package:oxe_backing/widgets/servicos.dart';
@@ -9,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
-    var spacoEntreServicos = screenHeight / 35;
+    var spacoEntreServicos = screenHeight / 40;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -32,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 90, 20, 156),
                   color2: Color.fromARGB(255, 236, 169, 92),
                   iconOfService: Icons.transform_rounded,
-                  screenTarget: Saldo(),
+                  screenTarget: Transferencia(),
                 ),
                 SizedBox(
                   width: spacoEntreServicos,

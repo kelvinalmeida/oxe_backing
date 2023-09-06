@@ -18,7 +18,7 @@ class Saldo extends StatelessWidget {
     var screenWidget = MediaQuery.of(context).size.width;
     return Container(
       height: screenHeight / 4.5,
-      width: double.infinity,
+      width: screenWidget - 40,
       margin: const EdgeInsets.symmetric(horizontal: 10),
       alignment: Alignment.centerLeft,
       decoration: const BoxDecoration(

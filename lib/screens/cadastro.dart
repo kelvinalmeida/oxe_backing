@@ -85,8 +85,27 @@ class _CadastroState extends State<Cadastro> {
                 SizedBox(
                   width: screenWidth / 1.5,
                   child: TextFormField(
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                       label: Text('Numero'),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: screenWidth / 1.5,
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      label: Text('CPF'),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: screenWidth / 1.5,
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      label: Text('RG'),
                     ),
                   ),
                 ),

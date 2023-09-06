@@ -33,8 +33,8 @@ class Servicos extends StatelessWidget {
         goToScreen(screenTarget, context);
       },
       child: Container(
-        height: screeHeight / 5,
-        width: screeHeight / 4.4,
+        height: screeHeight / 4,
+        width: screeHeight / 4,
         alignment: Alignment.bottomLeft,
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
