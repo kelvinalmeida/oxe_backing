@@ -5,9 +5,11 @@ class IconesTransfer extends StatelessWidget {
     super.key,
     required this.imagePath,
     required this.title,
+    required this.onShowButtonModal,
   });
   final String imagePath;
   final String title;
+  final void Function() onShowButtonModal;
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +17,13 @@ class IconesTransfer extends StatelessWidget {
     return Column(
       children: [
         InkWell(
-          onTap: () {},
+          onTap: onShowButtonModal,
           child: Container(
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 94, 185, 99),
+              gradient: const LinearGradient(colors: [
+                Color.fromARGB(255, 24, 4, 136),
+                Color.fromARGB(255, 129, 123, 219),
+              ]),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Image.asset(

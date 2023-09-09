@@ -1,8 +1,18 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:oxe_backing/widgets/iconesTransger.dart';
+import 'package:oxe_backing/widgets/iconesTransfer.dart';
+import 'package:oxe_backing/widgets/pix.dart';
 
 class Transferencia extends StatelessWidget {
   const Transferencia({super.key});
+
+  void showPix(BuildContext ctx) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      context: ctx,
+      builder: (ctx) => const Pix(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -11,16 +21,16 @@ class Transferencia extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Tranferencias'),
-        backgroundColor: const Color.fromARGB(255, 138, 23, 158),
+        backgroundColor: const Color.fromARGB(255, 47, 45, 190),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               'Selcione o modo de\n transferencia:',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -28,7 +38,7 @@ class Transferencia extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
@@ -37,20 +47,29 @@ class Transferencia extends StatelessWidget {
                 IconesTransfer(
                   imagePath: 'lib/src/img/pix.webp',
                   title: "PIX",
+                  onShowButtonModal: () {
+                    showPix(context);
+                  },
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 25,
                 ),
                 IconesTransfer(
                   imagePath: 'lib/src/img/ted_doc2.png',
                   title: "DOC/TED",
+                  onShowButtonModal: () {
+                    showPix(context);
+                  },
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 25,
                 ),
                 IconesTransfer(
                   imagePath: 'lib/src/img/receber.png',
                   title: "RECEBER",
+                  onShowButtonModal: () {
+                    showPix(context);
+                  },
                 ),
               ],
             )

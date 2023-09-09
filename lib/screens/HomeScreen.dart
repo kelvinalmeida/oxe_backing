@@ -30,8 +30,8 @@ class HomeScreen extends StatelessWidget {
               children: [
                 const Servicos(
                   nome: 'Transferências',
-                  color1: Color.fromARGB(255, 90, 20, 156),
-                  color2: Color.fromARGB(255, 236, 169, 92),
+                  color1: Color.fromARGB(255, 5, 57, 170),
+                  color2: Color.fromARGB(255, 156, 176, 241),
                   iconOfService: Icons.transform_rounded,
                   screenTarget: Transferencia(),
                 ),
