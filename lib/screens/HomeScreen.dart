@@ -9,8 +9,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var screenHeight = MediaQuery.of(context).size.height;
-    var spacoEntreServicos = screenHeight / 40;
+    var screenWidth = MediaQuery.of(context).size.width;
+    var spacoEntreServicos = screenWidth / 30;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -98,7 +98,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: screenHeight / 35,
+              height: screenWidth / 35,
             ),
           ],
         ),

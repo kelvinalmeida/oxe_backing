@@ -27,14 +27,14 @@ class Servicos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screeHeight = MediaQuery.of(context).size.height;
-
+    var screeWidth = MediaQuery.of(context).size.width;
     return InkWell(
       onTap: () {
         goToScreen(screenTarget, context);
       },
       child: Container(
-        height: screeHeight / 4,
-        width: screeHeight / 4,
+        height: (screeWidth - 50) / 2.7,
+        width: (screeWidth - 50) / 2,
         alignment: Alignment.bottomLeft,
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(

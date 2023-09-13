@@ -1,16 +1,24 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:oxe_backing/screens/docs.dart';
 import 'package:oxe_backing/widgets/iconesTransfer.dart';
-import 'package:oxe_backing/widgets/pix.dart';
+import 'package:oxe_backing/screens/pix.dart';
 
 class Transferencia extends StatelessWidget {
   const Transferencia({super.key});
 
   void showPix(BuildContext ctx) {
-    showModalBottomSheet(
-      isScrollControlled: true,
-      context: ctx,
-      builder: (ctx) => const Pix(),
+    Navigator.of(ctx).push(
+      MaterialPageRoute(
+        builder: (ctx) => const Pix(),
+      ),
+    );
+  }
+
+  void showDocs(BuildContext ctx) {
+    Navigator.of(ctx).push(
+      MaterialPageRoute(
+        builder: (ctx) => const Docs(),
+      ),
     );
   }
 
@@ -58,7 +66,7 @@ class Transferencia extends StatelessWidget {
                   imagePath: 'lib/src/img/ted_doc2.png',
                   title: "DOC/TED",
                   onShowButtonModal: () {
-                    showPix(context);
+                    showDocs(context);
                   },
                 ),
                 const SizedBox(

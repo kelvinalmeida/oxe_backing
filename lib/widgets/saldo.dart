@@ -17,7 +17,7 @@ class Saldo extends StatelessWidget {
     var screenHeight = MediaQuery.of(context).size.height;
     var screenWidget = MediaQuery.of(context).size.width;
     return Container(
-      height: screenHeight / 4.5,
+      height: screenHeight / 4,
       width: screenWidget - 40,
       margin: const EdgeInsets.symmetric(horizontal: 10),
       alignment: Alignment.centerLeft,
@@ -48,7 +48,7 @@ class Saldo extends StatelessWidget {
             height: screenHeight / 90,
           ),
           Text(
-            'Saldo:',
+            'Agencia / Conta / Digito',
             style: TextStyle(
               color: Colors.white,
               fontSize: screenHeight / 40,
@@ -56,10 +56,33 @@ class Saldo extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: screenHeight / 100,
+            height: screenHeight / 90,
+          ),
+          Text(
+            '5354654 5665-5',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: screenHeight / 40,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          SizedBox(
+            height: screenHeight / 90,
           ),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
+              Text(
+                'Saldo:',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: screenHeight / 40,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              SizedBox(
+                width: screenHeight / 90,
+              ),
               Text(
                 '10.235',
                 style: TextStyle(
