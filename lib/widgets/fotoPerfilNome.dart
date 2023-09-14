@@ -1,25 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:oxe_backing/screens/perfil.dart';
 
 class FotoPerfilNome extends StatelessWidget {
   const FotoPerfilNome({super.key});
 
+  void showPerfil(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (ctx) => const Perfil()));
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        CircleAvatar(
-          radius: 26,
-          backgroundColor: Color.fromARGB(255, 69, 110, 254),
-          child: CircleAvatar(
-              radius: 22,
-              backgroundImage: AssetImage(
-                'lib/src/img/man1.jpg',
-              )),
+        InkWell(
+          onTap: () {
+            showPerfil(context);
+          },
+          child: const CircleAvatar(
+            radius: 26,
+            backgroundColor: Color.fromARGB(255, 69, 110, 254),
+            child: CircleAvatar(
+                radius: 22,
+                backgroundImage: AssetImage(
+                  'lib/src/img/man1.jpg',
+                )),
+          ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
-        Text(
+        const Text(
           'Lucas Monteiro',
           style: TextStyle(
             fontSize: 20,

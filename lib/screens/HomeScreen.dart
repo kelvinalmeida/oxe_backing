@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                 const Servicos(
                   nome: 'Pagamentos',
                   color1: Color.fromARGB(255, 20, 156, 43),
-                  color2: Color.fromARGB(255, 236, 169, 92),
+                  color2: Color.fromARGB(255, 146, 92, 29),
                   iconOfService: Icons.monetization_on_outlined,
                   screenTarget: Saldo(),
                 ),
