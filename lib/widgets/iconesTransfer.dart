@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 class IconesTransfer extends StatelessWidget {
-  const IconesTransfer({
-    super.key,
-    required this.imagePath,
-    required this.title,
-    required this.onShowButtonModal,
-  });
+  const IconesTransfer(
+      {super.key,
+      required this.imagePath,
+      required this.title,
+      required this.onShowButtonModal,
+      required this.listColors});
   final String imagePath;
   final String title;
   final void Function() onShowButtonModal;
+  final List<Color> listColors;
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +21,7 @@ class IconesTransfer extends StatelessWidget {
           onTap: onShowButtonModal,
           child: Container(
             decoration: BoxDecoration(
-              gradient: const LinearGradient(colors: [
-                Color.fromARGB(255, 24, 4, 136),
-                Color.fromARGB(255, 129, 123, 219),
-              ]),
+              gradient: LinearGradient(colors: listColors),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Image.asset(
@@ -38,6 +36,7 @@ class IconesTransfer extends StatelessWidget {
         ),
         Text(
           title,
+          textAlign: TextAlign.center,
           style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,

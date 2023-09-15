@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oxe_backing/screens/emprestimos.dart';
 import 'package:oxe_backing/screens/transferencia.dart';
 import 'package:oxe_backing/widgets/appBarPhoto.dart';
 import 'package:oxe_backing/widgets/saldo.dart';
@@ -43,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 7, 126, 11),
                   color2: Color.fromARGB(255, 239, 243, 15),
                   iconOfService: Icons.monetization_on_rounded,
-                  screenTarget: Saldo(),
+                  screenTarget: Emprestimo(),
                 ),
               ],
             ),

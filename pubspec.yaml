@@ -65,6 +65,7 @@ flutter:
     - lib\src\img\pix.webp
     - lib\src\img\ted_doc2.png
     - lib\src\img\receber.png
+    - lib\src\img\receber_transfer.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

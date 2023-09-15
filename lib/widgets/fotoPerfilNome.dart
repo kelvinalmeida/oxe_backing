@@ -21,10 +21,11 @@ class FotoPerfilNome extends StatelessWidget {
             radius: 26,
             backgroundColor: Color.fromARGB(255, 69, 110, 254),
             child: CircleAvatar(
-                radius: 22,
-                backgroundImage: AssetImage(
-                  'lib/src/img/man1.jpg',
-                )),
+              radius: 22,
+              backgroundImage: AssetImage(
+                'lib/src/img/man1.jpg',
+              ),
+            ),
           ),
         ),
         const SizedBox(

@@ -58,6 +58,10 @@ class Transferencia extends StatelessWidget {
                   onShowButtonModal: () {
                     showPix(context);
                   },
+                  listColors: const [
+                    Color.fromARGB(255, 24, 4, 136),
+                    Color.fromARGB(255, 129, 123, 219),
+                  ],
                 ),
                 const SizedBox(
                   width: 25,
@@ -68,6 +72,10 @@ class Transferencia extends StatelessWidget {
                   onShowButtonModal: () {
                     showDocs(context);
                   },
+                  listColors: const [
+                    Color.fromARGB(255, 24, 4, 136),
+                    Color.fromARGB(255, 129, 123, 219),
+                  ],
                 ),
                 const SizedBox(
                   width: 25,
@@ -78,6 +86,10 @@ class Transferencia extends StatelessWidget {
                   onShowButtonModal: () {
                     showPix(context);
                   },
+                  listColors: const [
+                    Color.fromARGB(255, 24, 4, 136),
+                    Color.fromARGB(255, 129, 123, 219),
+                  ],
                 ),
               ],
             )
