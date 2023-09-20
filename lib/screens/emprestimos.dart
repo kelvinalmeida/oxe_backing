@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oxe_backing/screens/emprestimo_do_usuario.dart';
+import 'package:oxe_backing/screens/simular_emprestimo.dart';
 import 'package:oxe_backing/widgets/iconesTransfer.dart';
 
 class Emprestimo extends StatelessWidget {
@@ -8,7 +9,15 @@ class Emprestimo extends StatelessWidget {
   void showEmprestimoUsuario(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => EmprestimoUsuario(),
+        builder: (ctx) => const EmprestimoUsuario(),
+      ),
+    );
+  }
+
+  void showSimuladorDeEmprestimo(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => const SimularEmprestimo(),
       ),
     );
   }
@@ -34,7 +43,9 @@ class Emprestimo extends StatelessWidget {
                   IconesTransfer(
                     imagePath: 'lib/src/img/receber_transfer.png',
                     title: 'Simular\nEmprestimo',
-                    onShowButtonModal: () {},
+                    onShowButtonModal: () {
+                      showSimuladorDeEmprestimo(context);
+                    },
                     listColors: const [
                       Color.fromARGB(255, 32, 63, 33),
                       Color.fromARGB(255, 135, 151, 42),

@@ -8,62 +8,62 @@ class EmprestimoUsuario extends StatelessWidget {
     List<Map<String, String>> emprestimos = [
       {
         'titulo': 'Ferias',
-        'valor': '1235',
+        'valor': 'R\$ 1235',
         'data do pedido': '23/03/2021',
       },
       {
         'titulo': 'Reforma',
-        'valor': '50000',
+        'valor': 'R\$ 50000',
         'data do pedido': '23/03/2020',
       },
       {
         'titulo': 'viajem',
-        'valor': '5000',
+        'valor': 'R\$ 5000',
         'data do pedido': '23/02/2020',
       },
       {
         'titulo': 'Ferias',
-        'valor': '1235',
+        'valor': 'R\$ 1235',
         'data do pedido': '23/03/2021',
       },
       {
         'titulo': 'Reforma',
-        'valor': '50000',
+        'valor': 'R\$ 50000',
         'data do pedido': '23/03/2020',
       },
       {
         'titulo': 'viajem',
-        'valor': '5000',
+        'valor': 'R\$ 5000',
         'data do pedido': '23/02/2020',
       },
       {
         'titulo': 'Ferias',
-        'valor': '1235',
+        'valor': 'R\$ 1235',
         'data do pedido': '23/03/2021',
       },
       {
         'titulo': 'Reforma',
-        'valor': '50000',
+        'valor': 'R\$ 50000',
         'data do pedido': '23/03/2020',
       },
       {
         'titulo': 'viajem',
-        'valor': '5000',
+        'valor': 'R\$ 5000',
         'data do pedido': '23/02/2020',
       },
       {
         'titulo': 'Ferias',
-        'valor': '1235',
+        'valor': 'R\$ 1235',
         'data do pedido': '23/03/2021',
       },
       {
         'titulo': 'Reforma',
-        'valor': '50000',
+        'valor': 'R\$ 50000',
         'data do pedido': '23/03/2020',
       },
       {
         'titulo': 'viajem',
-        'valor': '5000',
+        'valor': 'R\$ 5000',
         'data do pedido': '23/02/2020',
       },
     ];
@@ -79,15 +79,22 @@ class EmprestimoUsuario extends StatelessWidget {
         child: ListView.builder(
           itemCount: emprestimos.length,
           itemBuilder: (context, index) => Card(
-            color: const Color.fromARGB(255, 213, 253, 241),
+            color: Color.fromARGB(255, 197, 221, 214),
             child: ListTile(
               leading: Text(emprestimos[index]['data do pedido']!),
               focusColor: Colors.amber,
               title: Text(
                 emprestimos[index]['titulo']!,
-                style: const TextStyle(fontSize: 20),
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              subtitle: Text(emprestimos[index]['valor']!),
+              subtitle: Text(emprestimos[index]['valor']!,
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                  )),
             ),
           ),
         ),
