@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oxe_backing/screens/emprestimos.dart';
+import 'package:oxe_backing/screens/pagamento.dart';
 import 'package:oxe_backing/screens/transferencia.dart';
 import 'package:oxe_backing/widgets/appBarPhoto.dart';
 import 'package:oxe_backing/widgets/saldo.dart';
@@ -59,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 20, 156, 43),
                   color2: Color.fromARGB(255, 146, 92, 29),
                   iconOfService: Icons.monetization_on_outlined,
-                  screenTarget: Saldo(),
+                  screenTarget: Pagamento(),
                 ),
                 SizedBox(
                   width: spacoEntreServicos,
@@ -84,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                   color1: Color.fromARGB(255, 20, 156, 43),
                   color2: Color.fromARGB(255, 236, 169, 92),
                   iconOfService: Icons.monetization_on_outlined,
-                  screenTarget: Saldo(),
+                  screenTarget: Pagamento(),
                 ),
                 SizedBox(
                   width: spacoEntreServicos,
