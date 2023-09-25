@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oxe_backing/screens/docs.dart';
-import 'package:oxe_backing/widgets/iconesTransfer.dart';
+import 'package:oxe_backing/widgets/iconesWidget.dart';
 import 'package:oxe_backing/screens/pix.dart';
 
 class Transferencia extends StatelessWidget {
@@ -52,7 +52,7 @@ class Transferencia extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconesTransfer(
+                IconeWidget(
                   imagePath: 'lib/src/img/pix.webp',
                   title: "PIX",
                   onShowButtonModal: () {
@@ -66,25 +66,11 @@ class Transferencia extends StatelessWidget {
                 const SizedBox(
                   width: 25,
                 ),
-                IconesTransfer(
+                IconeWidget(
                   imagePath: 'lib/src/img/ted_doc2.png',
                   title: "DOC/TED",
                   onShowButtonModal: () {
                     showDocs(context);
-                  },
-                  listColors: const [
-                    Color.fromARGB(255, 24, 4, 136),
-                    Color.fromARGB(255, 129, 123, 219),
-                  ],
-                ),
-                const SizedBox(
-                  width: 25,
-                ),
-                IconesTransfer(
-                  imagePath: 'lib/src/img/receber.png',
-                  title: "RECEBER",
-                  onShowButtonModal: () {
-                    showPix(context);
                   },
                   listColors: const [
                     Color.fromARGB(255, 24, 4, 136),

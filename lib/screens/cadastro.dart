@@ -67,7 +67,7 @@ class _CadastroState extends State<Cadastro> {
                   ],
                 ),
                 SizedBox(
-                  width: screenWidth / 1.5,
+                  width: screenWidth / 1.2,
                   child: TextFormField(
                     decoration: const InputDecoration(
                       label: Text('Email'),
@@ -75,7 +75,7 @@ class _CadastroState extends State<Cadastro> {
                   ),
                 ),
                 SizedBox(
-                  width: screenWidth / 1.5,
+                  width: screenWidth / 1.2,
                   child: TextFormField(
                     decoration: const InputDecoration(
                       label: Text('Senha'),
@@ -83,37 +83,54 @@ class _CadastroState extends State<Cadastro> {
                   ),
                 ),
                 SizedBox(
-                  width: screenWidth / 1.5,
+                  width: screenWidth / 1.2,
                   child: TextFormField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
-                      label: Text('Numero'),
+                      label: Text('Telefone'),
                     ),
                   ),
                 ),
                 SizedBox(
-                  width: screenWidth / 1.5,
+                  width: screenWidth / 1.2,
                   child: TextFormField(
                     keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
-                      label: Text('CPF'),
+                      label: Text('Rua'),
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: screenWidth / 1.5,
-                  child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    decoration: const InputDecoration(
-                      label: Text('RG'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: screenWidth / 2,
+                      child: TextFormField(
+                        keyboardType: TextInputType.number,
+                        decoration: const InputDecoration(
+                          label: Text('Bairro'),
+                        ),
+                      ),
                     ),
-                  ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    SizedBox(
+                      width: screenWidth / 3,
+                      child: TextFormField(
+                        keyboardType: TextInputType.number,
+                        decoration: const InputDecoration(
+                          label: Text('Cep'),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 30,
                 ),
                 SizedBox(
-                  width: screenWidth / 1.5,
+                  width: screenWidth / 1.2,
                   height: screenWidth / 8,
                   child: ElevatedButton(
                     onPressed: irTelaUsuario,

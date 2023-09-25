@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class IconesTransfer extends StatelessWidget {
-  const IconesTransfer(
+class IconeWidget extends StatelessWidget {
+  const IconeWidget(
       {super.key,
       required this.imagePath,
       required this.title,

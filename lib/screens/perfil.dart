@@ -12,14 +12,14 @@ class Perfil extends StatelessWidget {
         foregroundColor: Colors.black,
         elevation: 0,
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
-            CircleAvatar(
+            const CircleAvatar(
               radius: 80,
               backgroundColor: Color.fromARGB(255, 69, 110, 254),
               child: CircleAvatar(
@@ -28,46 +28,86 @@ class Perfil extends StatelessWidget {
                     'lib/src/img/man1.jpg',
                   )),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               'Nome: Lucas Monteiro',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'Data de Nacimento: 16/05/1996',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               'Conta / Agencia',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               '5354654 5665-5',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(
+              height: 50,
+            ),
+            SizedBox(
+              height: 50,
+              width: 200,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(
+                    Colors.red[400],
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Bloquear Conta',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 50,
+              width: 200,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(
+                    Colors.red[800],
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Fechar Conta',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
