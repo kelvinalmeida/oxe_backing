@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:oxe_backing/screens/login.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert' as convert;
 
 void main() {
+  fetch();
   runApp(const MyApp());
+}
+
+void fetch() async {
+  var url = Uri.http('dummyjson.com', 'products/1');
+  var response = await http.get(url);
+  // var mapOfJason = deco
+  if (response.statusCode < 400) {
+    var jsonResponse =
+        convert.jsonDecode(response.body) as Map<dynamic, dynamic>;
+    print(jsonResponse);
+  }
 }
 
 class MyApp extends StatelessWidget {

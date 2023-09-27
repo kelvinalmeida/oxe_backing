@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:oxe_backing/widgets/iconesTransfer.dart';
-import 'package:oxe_backing/widgets/servicos.dart';
+import 'package:oxe_backing/widgets/iconesWidget.dart';
 
 class Pagamento extends StatelessWidget {
   const Pagamento({super.key});
@@ -35,7 +34,7 @@ class Pagamento extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconesTransfer(
+                IconeWidget(
                   imagePath: 'lib/src/img/codigo.png',
                   title: 'Gerar Boleto',
                   onShowButtonModal: () {},
