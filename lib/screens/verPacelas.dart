@@ -1,70 +1,58 @@
 import 'package:flutter/material.dart';
 
-class EmprestimoUsuario extends StatelessWidget {
-  const EmprestimoUsuario({super.key});
+class VerParcelas extends StatelessWidget {
+  const VerParcelas({super.key});
 
   @override
   Widget build(BuildContext context) {
     List<Map<String, String>> emprestimos = [
       {
-        'titulo': 'Ferias',
-        'valor': 'R\$ 1235',
+        'titulo': 'Reforma',
+        'valor': 'R\$ 500',
         'data do pedido': '23/03/2021',
+        'pago': 'true',
       },
       {
         'titulo': 'Reforma',
-        'valor': 'R\$ 50000',
-        'data do pedido': '23/03/2020',
-      },
-      {
-        'titulo': 'viajem',
-        'valor': 'R\$ 5000',
-        'data do pedido': '23/02/2020',
-      },
-      {
-        'titulo': 'Ferias',
-        'valor': 'R\$ 1235',
-        'data do pedido': '23/03/2021',
+        'valor': 'R\$ 500',
+        'data do pedido': '23/04/2021',
+        'pago': 'true',
       },
       {
         'titulo': 'Reforma',
-        'valor': 'R\$ 50000',
-        'data do pedido': '23/03/2020',
-      },
-      {
-        'titulo': 'viajem',
-        'valor': 'R\$ 5000',
-        'data do pedido': '23/02/2020',
-      },
-      {
-        'titulo': 'Ferias',
-        'valor': 'R\$ 1235',
-        'data do pedido': '23/03/2021',
+        'valor': 'R\$ 500',
+        'data do pedido': '23/05/2021',
+        'pago': 'false',
       },
       {
         'titulo': 'Reforma',
-        'valor': 'R\$ 50000',
-        'data do pedido': '23/03/2020',
-      },
-      {
-        'titulo': 'viajem',
-        'valor': 'R\$ 5000',
-        'data do pedido': '23/02/2020',
-      },
-      {
-        'titulo': 'Ferias',
-        'valor': 'R\$ 1235',
-        'data do pedido': '23/03/2021',
+        'valor': 'R\$ 500',
+        'data do pedido': '23/06/2021',
+        'pago': 'false',
       },
       {
         'titulo': 'Reforma',
-        'valor': 'R\$ 50000',
-        'data do pedido': '23/03/2020',
+        'valor': 'R\$ 500',
+        'data do pedido': '23/07/2021',
+        'pago': 'false',
       },
       {
-        'titulo': 'viajem',
-        'valor': 'R\$ 5000',
-        'data do pedido': '23/02/2020',
+        'titulo': 'Reforma',
+        'valor': 'R\$ 500',
+        'data do pedido': '23/08/2021',
+        'pago': 'false',
+      },
+      {
+        'titulo': 'Reforma',
+        'valor': 'R\$ 500',
+        'data do pedido': '23/09/2021',
+        'pago': 'false',
+      },
+      {
+        'titulo': 'Reforma',
+        'valor': 'R\$ 500',
+        'data do pedido': '23/10/2021',
+        'pago': 'false',
       },
     ];
 
@@ -79,7 +67,7 @@ class EmprestimoUsuario extends StatelessWidget {
         child: ListView.builder(
           itemCount: emprestimos.length,
           itemBuilder: (context, index) => Card(
-            color: Color.fromARGB(255, 197, 221, 214),
+            color: const Color.fromARGB(255, 197, 221, 214),
             child: ListTile(
               leading: Text(emprestimos[index]['data do pedido']!),
               focusColor: Colors.amber,
@@ -95,6 +83,14 @@ class EmprestimoUsuario extends StatelessWidget {
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
                   )),
+              trailing: ElevatedButton(
+                onPressed:
+                    emprestimos[index]['pago']! == 'false' ? () {} : null,
+                style: const ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Colors.green)),
+                child: Text(
+                    emprestimos[index]['pago']! == 'false' ? 'Pagar' : 'Pago!'),
+              ),
             ),
           ),
         ),

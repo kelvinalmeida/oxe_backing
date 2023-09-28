@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:oxe_backing/screens/emprestimo_do_usuario.dart';
+import 'package:oxe_backing/screens/verPacelas.dart';
 import 'package:oxe_backing/screens/simular_emprestimo.dart';
+import 'package:oxe_backing/screens/solicitar_renegocioacao.dart';
 import 'package:oxe_backing/widgets/iconesWidget.dart';
 
 class Emprestimo extends StatelessWidget {
@@ -9,7 +10,7 @@ class Emprestimo extends StatelessWidget {
   void showEmprestimoUsuario(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => const EmprestimoUsuario(),
+        builder: (ctx) => const VerParcelas(),
       ),
     );
   }
@@ -18,6 +19,14 @@ class Emprestimo extends StatelessWidget {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (ctx) => const SimularEmprestimo(),
+      ),
+    );
+  }
+
+  void showSolicitarRenegociacao(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => const SolicitarRenegociacao(),
       ),
     );
   }
@@ -51,6 +60,8 @@ class Emprestimo extends StatelessWidget {
                       Color.fromARGB(255, 32, 63, 33),
                       Color.fromARGB(255, 135, 151, 42),
                     ],
+                    containerSize: 7,
+                    fontSize: 17,
                   ),
                   const SizedBox(
                     width: 20,
@@ -65,25 +76,24 @@ class Emprestimo extends StatelessWidget {
                       Color.fromARGB(255, 32, 63, 33),
                       Color.fromARGB(255, 135, 151, 42),
                     ],
+                    containerSize: 7,
+                    fontSize: 17,
                   ),
-                ],
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
                   IconeWidget(
                     imagePath: 'lib/src/img/receber_transfer.png',
                     title: 'Socilitar\nRenegociação',
                     onShowButtonModal: () {
-                      showSimuladorDeEmprestimo(context);
+                      showSolicitarRenegociacao(context);
                     },
                     listColors: const [
                       Color.fromARGB(255, 32, 63, 33),
                       Color.fromARGB(255, 135, 151, 42),
                     ],
+                    containerSize: 7,
+                    fontSize: 17,
                   ),
                 ],
               ),

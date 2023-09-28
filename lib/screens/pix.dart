@@ -47,7 +47,16 @@ class _PixState extends State<Pix> {
             ),
             const SizedBox(
               width: 250,
-              child: TextField(),
+              child: TextField(
+                decoration: InputDecoration(label: Text('Chave Pix')),
+              ),
+            ),
+            const SizedBox(
+              width: 250,
+              child: TextField(
+                decoration: InputDecoration(label: Text('Valor do Pix')),
+                keyboardType: TextInputType.number,
+              ),
             ),
             const SizedBox(
               height: 20,

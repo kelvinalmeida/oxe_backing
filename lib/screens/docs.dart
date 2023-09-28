@@ -11,8 +11,10 @@ class _DocsState extends State<Docs> {
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
-    List<String> list = ['Caixa', 'Bradesco', 'NuBanck', '...'];
-    String dropdownValue = list.first;
+    List<String> listOfBanks = ['Caixa', 'Bradesco', 'NuBanck', '...'];
+    List<String> listOfTypes = ['TED', 'DOC'];
+    String bankValue = listOfBanks.first;
+    String typeValue = listOfTypes.first;
 
     return Scaffold(
       appBar: AppBar(
@@ -26,14 +28,29 @@ class _DocsState extends State<Docs> {
           child: Column(
             children: [
               DropdownMenu<String>(
-                initialSelection: list.first,
+                initialSelection: listOfTypes.first,
                 onSelected: (String? value) {
                   // This is called when the user selects an item.
                   setState(() {
-                    dropdownValue = value!;
+                    typeValue = value!;
                   });
                 },
-                dropdownMenuEntries: list.map((String value) {
+                dropdownMenuEntries: listOfTypes.map((String value) {
+                  return DropdownMenuEntry(value: value, label: value);
+                }).toList(),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              DropdownMenu<String>(
+                initialSelection: listOfBanks.first,
+                onSelected: (String? value) {
+                  // This is called when the user selects an item.
+                  setState(() {
+                    bankValue = value!;
+                  });
+                },
+                dropdownMenuEntries: listOfBanks.map((String value) {
                   return DropdownMenuEntry(value: value, label: value);
                 }).toList(),
               ),
@@ -71,6 +88,13 @@ class _DocsState extends State<Docs> {
                     ),
                   ),
                 ],
+              ),
+              const SizedBox(
+                width: 210,
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(label: Text("Valor")),
+                ),
               ),
               const SizedBox(
                 height: 20,

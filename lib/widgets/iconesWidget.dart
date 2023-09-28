@@ -1,16 +1,23 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class IconeWidget extends StatelessWidget {
-  const IconeWidget(
-      {super.key,
-      required this.imagePath,
-      required this.title,
-      required this.onShowButtonModal,
-      required this.listColors});
+  const IconeWidget({
+    super.key,
+    required this.imagePath,
+    required this.title,
+    required this.onShowButtonModal,
+    required this.listColors,
+    this.containerSize,
+    this.fontSize,
+  });
   final String imagePath;
   final String title;
   final void Function() onShowButtonModal;
   final List<Color> listColors;
+  final double? containerSize;
+  final double? fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +33,7 @@ class IconeWidget extends StatelessWidget {
             ),
             child: Image.asset(
               imagePath,
-              height: screenwidth / 5,
+              height: screenwidth / (containerSize ?? 5),
               color: Colors.white,
             ),
           ),
@@ -37,8 +44,8 @@ class IconeWidget extends StatelessWidget {
         Text(
           title,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 20,
+          style: TextStyle(
+            fontSize: fontSize ?? 20,
             fontWeight: FontWeight.bold,
           ),
         )
