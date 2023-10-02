@@ -1,8 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:oxe_backing/screens/investimento/consultar_investimentos.dart';
+import 'package:oxe_backing/screens/investimento/investir.dart';
 import 'package:oxe_backing/widgets/iconesWidget.dart';
 
 class Investimento extends StatelessWidget {
   const Investimento({super.key});
+
+  void showInvestir(BuildContext ctx) {
+    Navigator.push(
+        ctx,
+        MaterialPageRoute(
+          builder: (ctx) => const Investir(),
+        ));
+  }
+
+  void showConsultar(BuildContext ctx) {
+    Navigator.push(
+        ctx,
+        MaterialPageRoute(
+          builder: (ctx) => const ConsultarInvestimentos(),
+        ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +55,7 @@ class Investimento extends StatelessWidget {
                   imagePath: 'lib/src/img/codigo.png',
                   title: 'Investir',
                   onShowButtonModal: () {
-                    // showGerarBoleto(context);
+                    showInvestir(context);
                   },
                   listColors: const [
                     Color.fromARGB(255, 109, 110, 1),
@@ -51,7 +69,7 @@ class Investimento extends StatelessWidget {
                   imagePath: 'lib/src/img/receber_transfer.png',
                   title: 'Consultar Meus\nInvestimentos',
                   onShowButtonModal: () {
-                    // showPagarViaBoleto(context);
+                    showConsultar(context);
                   },
                   listColors: const [
                     Color.fromARGB(255, 109, 110, 1),

@@ -36,7 +36,6 @@ class _ExtratoState extends State<Extrato> {
     {'data': '14/06/2023', 'tipo': 'Saque com Cartão', 'quantia': '600'},
     {'data': '16/12/2023', 'tipo': 'Depósito', 'quantia': '80'},
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
