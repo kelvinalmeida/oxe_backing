@@ -34,14 +34,19 @@ class SimularEmprestimo extends StatelessWidget {
                 keyboardType: TextInputType.number,
               ),
               const SizedBox(
-                height: 10,
+                height: 20,
               ),
               SizedBox(
                 width: double.infinity,
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: const Text('Simular'),
+                  child: const Text(
+                    'Simular',
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
+                  ),
                 ),
               ),
             ],

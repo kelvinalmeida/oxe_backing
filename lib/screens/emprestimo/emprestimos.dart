@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:oxe_backing/screens/verPacelas.dart';
-import 'package:oxe_backing/screens/simular_emprestimo.dart';
-import 'package:oxe_backing/screens/solicitar_renegocioacao.dart';
+import 'package:oxe_backing/screens/emprestimo/verPacelas.dart';
+import 'package:oxe_backing/screens/emprestimo/simular_emprestimo.dart';
+import 'package:oxe_backing/screens/emprestimo/solicitar_renegocioacao.dart';
 import 'package:oxe_backing/widgets/iconesWidget.dart';
 
 class Emprestimo extends StatelessWidget {

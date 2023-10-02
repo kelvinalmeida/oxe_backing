@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:oxe_backing/screens/emprestimos.dart';
-import 'package:oxe_backing/screens/pagamento.dart';
-import 'package:oxe_backing/screens/transferencia.dart';
+import 'package:oxe_backing/screens/emprestimo/emprestimos.dart';
+import 'package:oxe_backing/screens/investimento/investimento.dart';
+import 'package:oxe_backing/screens/pagamento/pagamento.dart';
+import 'package:oxe_backing/screens/transferencia/transferencia.dart';
 import 'package:oxe_backing/widgets/appBarPhoto.dart';
 import 'package:oxe_backing/widgets/saldo.dart';
 import 'package:oxe_backing/widgets/servicos.dart';
@@ -66,36 +67,11 @@ class HomeScreen extends StatelessWidget {
                   width: spacoEntreServicos,
                 ),
                 const Servicos(
-                  nome: 'Poupança',
+                  nome: 'Investimentos',
                   color1: Color.fromARGB(255, 228, 172, 53),
                   color2: Color.fromARGB(255, 81, 108, 129),
-                  iconOfService: Icons.safety_check,
-                  screenTarget: Saldo(),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: spacoEntreServicos,
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Servicos(
-                  nome: 'Pagamentos',
-                  color1: Color.fromARGB(255, 20, 156, 43),
-                  color2: Color.fromARGB(255, 236, 169, 92),
-                  iconOfService: Icons.monetization_on_outlined,
-                  screenTarget: Pagamento(),
-                ),
-                SizedBox(
-                  width: spacoEntreServicos,
-                ),
-                const Servicos(
-                  nome: 'Poupança',
-                  color1: Color.fromARGB(255, 47, 156, 51),
-                  color2: Color.fromARGB(255, 89, 241, 94),
-                  iconOfService: Icons.safety_check,
-                  screenTarget: Saldo(),
+                  iconOfService: Icons.money_rounded,
+                  screenTarget: Investimento(),
                 ),
               ],
             ),

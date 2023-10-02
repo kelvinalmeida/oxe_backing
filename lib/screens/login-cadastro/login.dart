@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oxe_backing/screens/HomeScreen.dart';
-import 'package:oxe_backing/screens/cadastro.dart';
+import 'package:oxe_backing/screens/login-cadastro/cadastro.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});

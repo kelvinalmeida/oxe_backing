@@ -58,7 +58,7 @@ class VerParcelas extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Emprestimo do Usuário'),
+        title: const Text('Parcelas do Emprestimo'),
         elevation: 0,
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,

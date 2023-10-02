@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:oxe_backing/screens/gerar_boleto.dart';
-import 'package:oxe_backing/screens/pagar_por_boleto.dart';
+import 'package:oxe_backing/screens/pagamento/gerar_boleto.dart';
+import 'package:oxe_backing/screens/pagamento/pagar_por_boleto.dart';
 import 'package:oxe_backing/widgets/iconesWidget.dart';
 
 class Pagamento extends StatelessWidget {

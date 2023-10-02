@@ -19,15 +19,15 @@ class PagarPorBoleto extends StatelessWidget {
               height: 50,
             ),
             const SizedBox(
-              height: 50,
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            const SizedBox(
               width: 250,
               child: TextField(
-                decoration: InputDecoration(label: Text('Valor')),
+                decoration: InputDecoration(
+                    label: Text(
+                  'Valor',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                )),
               ),
             ),
             const SizedBox(
@@ -36,12 +36,24 @@ class PagarPorBoleto extends StatelessWidget {
             const Text(
               'Informações do Recebedor',
               textAlign: TextAlign.left,
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             const SizedBox(
               width: 250,
               child: TextField(
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(label: Text("Conta")),
+                decoration: InputDecoration(
+                    label: Text(
+                  "Conta",
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                )),
               ),
             ),
             const SizedBox(
@@ -54,7 +66,13 @@ class PagarPorBoleto extends StatelessWidget {
                   width: 120,
                   child: TextField(
                     keyboardType: TextInputType.number,
-                    decoration: InputDecoration(label: Text("Agencia")),
+                    decoration: InputDecoration(
+                        label: Text(
+                      "Agencia",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    )),
                   ),
                 ),
                 SizedBox(
@@ -64,16 +82,23 @@ class PagarPorBoleto extends StatelessWidget {
                   width: 120,
                   child: TextField(
                     keyboardType: TextInputType.number,
-                    decoration: InputDecoration(label: Text("Dígito")),
+                    decoration: InputDecoration(
+                        label: Text(
+                      "Dígito",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    )),
                   ),
                 ),
               ],
             ),
             const SizedBox(
-              height: 10,
+              height: 20,
             ),
             SizedBox(
-              width: 150,
+              width: 200,
+              height: 50,
               child: ElevatedButton(
                 onPressed: () {},
                 style: const ButtonStyle(
@@ -81,7 +106,9 @@ class PagarPorBoleto extends StatelessWidget {
                         Color.fromARGB(255, 230, 149, 0))),
                 child: const Text(
                   'Gerar Boleto',
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(
+                    fontSize: 25,
+                  ),
                 ),
               ),
             ),

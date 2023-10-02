@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:oxe_backing/screens/docs.dart';
+import 'package:oxe_backing/screens/transferencia/docs.dart';
 import 'package:oxe_backing/widgets/iconesWidget.dart';
-import 'package:oxe_backing/screens/pix.dart';
+import 'package:oxe_backing/screens/transferencia/pix.dart';
 
 class Transferencia extends StatelessWidget {
   const Transferencia({super.key});

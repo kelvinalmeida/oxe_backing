@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:oxe_backing/screens/extrato.dart';
+import 'package:oxe_backing/screens/extrato/extrato.dart';
 
 class Saldo extends StatelessWidget {
   const Saldo({super.key});
