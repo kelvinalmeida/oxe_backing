@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:oxe_backing/screens/emprestimo/emprestimos.dart';
 import 'package:oxe_backing/screens/investimento/investimento.dart';
 import 'package:oxe_backing/screens/pagamento/pagamento.dart';
+import 'package:oxe_backing/screens/polpanca/polpanca.dart';
 import 'package:oxe_backing/screens/transferencia/transferencia.dart';
 import 'package:oxe_backing/widgets/appBarPhoto.dart';
 import 'package:oxe_backing/widgets/saldo.dart';
@@ -45,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                   nome: 'Empréstimos',
                   color1: Color.fromARGB(255, 7, 126, 11),
                   color2: Color.fromARGB(255, 239, 243, 15),
-                  iconOfService: Icons.monetization_on_rounded,
+                  iconOfService: Icons.handshake_sharp,
                   screenTarget: Emprestimo(),
                 ),
               ],
@@ -77,6 +78,31 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(
               height: screenWidth / 35,
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Servicos(
+                  nome: 'Polpança',
+                  color1: Color.fromARGB(255, 5, 94, 136),
+                  color2: Color.fromARGB(255, 194, 147, 19),
+                  iconOfService: Icons.attach_money,
+                  screenTarget: Polpanca(),
+                ),
+                SizedBox(
+                  width: spacoEntreServicos,
+                ),
+                const Servicos(
+                  nome: 'Cartão',
+                  color1: Color.fromARGB(255, 20, 156, 43),
+                  color2: Color.fromARGB(255, 146, 92, 29),
+                  iconOfService: Icons.credit_card,
+                  screenTarget: Scaffold(),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: spacoEntreServicos,
             ),
           ],
         ),
